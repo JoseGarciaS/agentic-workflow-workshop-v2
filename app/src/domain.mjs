@@ -71,3 +71,12 @@ export function paginate(items, page, perPage) {
 
   return items.slice(start, start + safePerPage);
 }
+
+export function topPriority(issues, count) {
+  const limit = Math.max(0, Math.trunc(Number(count)) || 0);
+  return [...issues]
+    .map((issue) => ({ issue, score: scoreIssue(issue) }))
+.sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(({ issue }) => issue);
+}
