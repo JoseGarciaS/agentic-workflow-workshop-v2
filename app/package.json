@@ -1,5 +1,5 @@
 {
-  "name": "mona-issue-triage-api",
+  "name": "math-helpers",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -7,11 +7,6 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test test/domain.test.mjs",
-    "start": "node src/server.mjs",
-    "dev": "node --watch src/server.mjs"
-  },
-  "dependencies": {
-    "express": "^4.22.2"
+    "test": "node --test test/domain.test.mjs"
   }
 }

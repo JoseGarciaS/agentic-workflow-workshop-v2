@@ -38,6 +38,8 @@ safe-outputs:
       - app/src/domain.mjs
 ---
 
+You are helping maintain a tiny math helpers module. The **CI** workflow just failed. Diagnose the failure and open a pull request that fixes it **on the branch that failed**, not on `main`.
+
 Read `notes/ci-fix-guide.md` before changing code.
 
 Determine the failing branch from `github.event.workflow_run.head_branch` on automatic runs, or from the `branch` input on manual `workflow_dispatch` runs. The runner has already checked out that branch for you. Confirm the current branch with `git status`, and do not fetch, switch branches, or reconstruct the branch on top of `main`.
